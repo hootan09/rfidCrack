@@ -395,6 +395,6 @@ also works #nfc-list and #nfc-poll
 
 now both works #nfc-list and #nfc-poll
 
-#connect via USB
+# connect via USB
 you can also work with PN532 with usb_TTL/FTDI in kali_linux/RaspBerryPi
 ![server 1](https://github.com/hootan09/rfidCrack/blob/master/pic/usb.jpg)
