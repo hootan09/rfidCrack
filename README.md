@@ -5,7 +5,7 @@ The NFC tag I analyzed is a so called “Mifare Classic 1k” tag. 1k stands for
 A Mifare Classic 1k tag contains 16 sectors. Each of these sectors has 3 blocks of data storage and 1 block for storing the secret access keys and access controls. Each block contains 16 bytes of data. Before reading a sector, the reader must authenticate to the tag with a secret access key. Each sector has two keys: Key A and Key B Each of the 16 sectors can define it’s own access right and wich key is needed for a particular action. As an example you can define to use Key A for reading the block and Key B for writing to it. Sector 0 Block 0 also contains a non changeable UID (the tags unique ID) and some manufacturer data. This section is only writeable on some special chinese tags.
 
 Here is a basically memory layout of a Mifare Classic tag:
-![server 1](https://github.com/hootan09/rifiCrack/pic/mifare_breakoutboard_thumb.jpg)
+![server 1](https://github.com/hootan09/rfidCrack/pic/mifare_breakoutboard_thumb.jpg)
 
 #### Important notice: NFC and the used attack depend a lot on timing. Connecting a NFC device to a VM running linux will not work reliable because the drivers mess with this timing. I spent a lot of time finding this out, so please boot into a linux live cd for the following example or use a Raspberry Pi.
 
