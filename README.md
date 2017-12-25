@@ -357,5 +357,34 @@ connstring = pn532_uart:/dev/ttyAMA0
 #SPI
 #device.name = "_PN532_SPI"
 #device.connstring = "pn532_spi:/dev/spidev0.0:280000"
-
 ```
+if you want to use SPI or I2c ,you must enable it in #raspi-config 'advance option'
+
+### I2C
+
+| PN532 NFC | Raspberry Pi |
+| ------------- | ------------- |
+| VCC  | 5V  |
+| GND  | GND  |
+| SDA  | SDA1  |
+| SCL  | SCL1  |
+
+the try this command to check whether the I2C device is recognized
+```sh
+$i2cdetect  -y  1
+```
+also works #nfc-list and #nfc-poll
+
+### SPI
+![server 1](https://github.com/hootan09/rfidCrack/blob/master/pic/spi-mode.png)
+
+| PN532 NFC | Raspberry Pi |
+| ------------- | ------------- |
+| VCC  | 5V  |
+| GND  | GND  |
+| SCK  | SCKL  |
+| MISO  | MISO  |
+| MOSI  | MOSI  |
+| SS  | CE0  |
+
+now both works #nfc-list and #nfc-poll
