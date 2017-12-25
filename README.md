@@ -364,10 +364,10 @@ if you want to use SPI or I2c ,you must enable it in #raspi-config 'advance opti
 
 | PN532 NFC | Raspberry Pi |
 | ------------- | ------------- |
-| VCC  | 5V  |
+| VCC  | 5V/3.3V  |
 | GND  | GND  |
-| SDA  | SDA1  |
-| SCL  | SCL1  |
+| SDA  | I2C1 SDA  |
+| SCL  | I2C1 SCL  |
 
 the try this command to check whether the I2C device is recognized
 ```sh
@@ -380,11 +380,11 @@ also works #nfc-list and #nfc-poll
 
 | PN532 NFC | Raspberry Pi |
 | ------------- | ------------- |
-| VCC  | 5V  |
+| VCC  | 5V/3.3V  |
 | GND  | GND  |
-| SCK  | SCKL  |
-| MISO  | MISO  |
-| MOSI  | MOSI  |
-| SS  | CE0  |
+| SCK  | SPI0 SCKL  |
+| MISO  | SPI0 MISO  |
+| MOSI  | SPI0 MOSI  |
+| SS/SDA  | CE0/CS0  |
 
 now both works #nfc-list and #nfc-poll
