@@ -343,3 +343,19 @@ ACR122U:
 # reboot
 $ sudo nano /boot/config.txt //search and set 'enable_uart=1'
 ````
+
+## other connection I2c,SPI,UART /etc/libnfc/devices.d
+```sh
+#UART
+name = "PN532 board via UART"
+connstring = pn532_uart:/dev/ttyAMA0
+
+#I2C
+#device.name = "_PN532_I2c"
+#device.connstring = "pn532_i2c:/dev/i2c-1"
+
+#SPI
+#device.name = "_PN532_SPI"
+#device.connstring = "pn532_spi:/dev/spidev0.0:280000"
+
+```
