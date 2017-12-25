@@ -78,8 +78,9 @@ make install
 ```
 
 ### start cracking
-```sh
 To start the key cracking connect your reader, place the tag on the antenna and run
+```sh
+mfoc -O output.mfd
 ```
 If the tool outputs “Maybe you should increase the number of probes”, the cracking was not successful. I got this message when running in a VMWare environment or by using crappy hardware. Switching to the Adafruit breakout board and a dedicated linux solved the problem for me.
 
