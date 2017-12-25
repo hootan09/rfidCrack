@@ -345,6 +345,7 @@ $ sudo nano /boot/config.txt //search and set 'enable_uart=1'
 ````
 
 ## other connection I2c,SPI,UART /etc/libnfc/devices.d
+### note i onlly test UART & USB connection
 ```sh
 #UART
 name = "PN532 board via UART"
@@ -357,6 +358,11 @@ connstring = pn532_uart:/dev/ttyAMA0
 #SPI
 #device.name = "_PN532_SPI"
 #device.connstring = "pn532_spi:/dev/spidev0.0:280000"
+
+#USB
+#name = "Adafruit PN532 board via UART"
+#connstring = pn532_uart:/dev/ttyUSB0
+
 ```
 if you want to use SPI or I2c ,you must enable it in #raspi-config 'advance option'
 
@@ -388,3 +394,7 @@ also works #nfc-list and #nfc-poll
 | SS/SDA  | CE0/CS0  |
 
 now both works #nfc-list and #nfc-poll
+
+#connect via USB
+you can also work with PN532 with usb_TTL/FTDI in kali_linux/RaspBerryPi
+![server 1](https://github.com/hootan09/rfidCrack/blob/master/pic/usb.jpg)
